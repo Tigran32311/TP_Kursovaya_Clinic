@@ -1,0 +1,70 @@
+﻿@model Clinic.Models.Doctor
+
+@{
+    Layout = "_LayoutAuthorizeAdmin";
+
+    ViewData["Title"] = "Delete";
+}
+
+<section class="rols">
+    <p>Личный кабинет администратора</p>
+</section>
+
+<p class="dobro_poz">Удалить услугу</p>
+<hr />
+
+<h3>Вы уверены, что хотите удалить этого врача?</h3>
+<div>
+    <h4>Врач</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fathername)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fathername)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WorkShift)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WorkShift)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Specialization)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Specialization.Id)
+        </dd>
+    </dl>
+    
+    <form asp-action="DeleteDoctors">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-action="IndexDoctors">Вернуться к списку</a>
+    </form>
+</div>

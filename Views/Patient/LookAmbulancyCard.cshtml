@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "_LayoutAuthorizePatient";
+
+    List<Appointment> appointments = ViewData["Appointments"] != null ? (List<Appointment>)ViewData["Appointments"] : null;
+
+    List<Doctor> doctors = ViewData["Doctors"] != null ? (List<Doctor>)ViewData["Doctors"] : null;
+    List<Specialization> specializations = ViewData["Specialization"] != null ? (List<Specialization>)ViewData["Specialization"] : null;
+    List<Service> services = ViewData["Services"] != null ? (List<Service>)ViewData["Services"] : null;
+    List<Time> times = ViewData["times"] != null ? (List<Time>)ViewData["times"] : null;
+
+    List<Сonclusion> conclusions = ViewData["Conclusions"] != null ? (List<Сonclusion>)ViewData["Conclusions"] : null;
+
+}
+
+<section class="rols">
+    <p>Личный кабинет</p>
+</section>
+
+<p class="dobro_poz">Амбулаторная карта</p>
+<hr />
+@foreach (var item in conclusions)
+{
+    <div class="simple_text">
+    <p>Дата: @appointments.Where(a=>a.Id == item.AppointmentId).Select(a=>a.DateOfAppointment.ToString("dd':'MM':'yy")).FirstOrDefault()</p>
+    @if (doctors.Any(a=>a.Id==appointments.Where(a=>a.Id == item.AppointmentId).Select(a=>a.DoctorId).FirstOrDefault() && a.WorkShift == 1)){
+        <p>Время: @times.Where(a=>a.Id == item.Id).Select(a=>a.timeOnlyMorning).FirstOrDefault().ToString("hh':'mm")</p>
+    } else {
+        <p>Время: @times.Where(a=>a.Id == item.Id).Select(a=>a.timeOnlyEvening).FirstOrDefault().ToString("hh':'mm")</p>
+    }
+
+        <p>
+        Врач: @doctors.Where(a=>a.Id == appointments.Where(a=>a.Id == item.AppointmentId).Select(a=>a.DoctorId).FirstOrDefault()).Select(a=>a.Name).FirstOrDefault()
+        @doctors.Where(a=>a.Id == appointments.Where(a=>a.Id == item.AppointmentId).Select(a=>a.DoctorId).FirstOrDefault()).Select(a=>a.Surname).FirstOrDefault()
+        @doctors.Where(a=>a.Id == appointments.Where(a=>a.Id == item.AppointmentId).Select(a=>a.DoctorId).FirstOrDefault()).Select(a=>a.Fathername).FirstOrDefault()
+    </p>
+    <p>Услуга:  @services.Where(a=>a.Id == appointments.Where(a=>a.Id == item.AppointmentId).Select(a=>a.ServiceId).FirstOrDefault()).Select(a=>a.ServiceName).FirstOrDefault()</p>
+    <p>Специализация: @specializations.Where(a=>a.Id == @services.Where(a=>a.Id == services.Where(a=>a.Id == appointments.Where(a=>
+        a.Id == item.AppointmentId).Select(a=>a.ServiceId).FirstOrDefault()).Select(a=>a.Id).FirstOrDefault())
+        .Select(a=>a.SpecializationId).FirstOrDefault()).Select(a=>a.SpecializationName).FirstOrDefault()</p>
+    <p>Жалобы: @conclusions.Where(a=>a.Id == item.Id).Select(a=>a.Complaints).FirstOrDefault()</p>
+    <p>Рекомендации: @conclusions.Where(a=>a.Id == item.Id).Select(a=>a.Recommendations).FirstOrDefault()</p>
+    <p>Диагноз: @conclusions.Where(a=>a.Id == item.Id).Select(a=>a.Diagnosis).FirstOrDefault()</p>
+    <hr />
+    </div>
+}

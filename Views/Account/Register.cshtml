@@ -1,0 +1,20 @@
+﻿@model Clinic.Models.Patient
+
+<section>
+        <div class="container-register container-style">
+            <form asp-action="Register">
+            <h1 class="register">Регистрация</h1>
+            <label asp-for="Name"> Name:</label>
+            <input asp-for="Name" class="style-register" type="text" name="" placeholder="Введите имя">
+            <label asp-for="Surname">Surname:</label>
+            <input asp-for="Surname" class="style-register" type="text" name="" placeholder="Введите фамилию">
+            <label asp-for="Fathername"> Fathername:</label>
+            <input asp-for="Fathername" class="style-register" type="text" name="" placeholder="Введите отчество">
+            <label asp-for="Email"> E-mail:</label>
+            <input asp-for="Email" class="style-register" type="email" name="" placeholder="Введите e-mail">
+            <label asp-for="Password"> Пароль:</label>
+            <input asp-for="Password" class="style-register" type="password" name="" placeholder="Введите пароль">
+            <button class="btn-otpravit">Отправить</button>
+        </form>
+        </div>
+    </section>

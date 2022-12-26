@@ -1,0 +1,37 @@
+﻿@model Clinic.Models.Service
+
+@{
+    Layout = "_LayoutAuthorizeAdmin";
+
+    ViewData["Title"] = "Details";
+}
+
+<section class="rols">
+    <p>Личный кабинет администратора</p>
+</section>
+
+<p class="dobro_poz">Подробнее об услуге</p>
+<hr />
+
+<div>
+    <h4>Услуга</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ServiceName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SpecializationId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SpecializationId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="EditServices" asp-route-id="@Model?.Id">Редактировать</a> |
+    <a asp-action="IndexServices">Вернуться к списку</a>
+</div>

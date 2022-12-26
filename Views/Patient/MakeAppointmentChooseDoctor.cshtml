@@ -1,0 +1,38 @@
+﻿@using Clinic.Models
+
+@{
+    Layout = "_LayoutAuthorizePatient";
+
+    List<Doctor> doctors = ViewData["Doctors"] != null ? (List<Doctor>)ViewData["Doctors"] : null;
+    List<Specialization> specializations = ViewData["Specialization"] != null ? (List<Specialization>)ViewData["Specialization"] : null;
+    //ViewData["Title"] = "Create";
+}
+
+<section class="rols">
+    <p>Запись на приём</p>
+</section>
+
+<p class="dobro_poz">Выбор врача</p>
+<hr />
+
+    <section>
+        <div class="container container-style" id="container-style-vrach">
+            <form asp-action="Create">
+            <div class="container-of-vrach"> 
+                @foreach(var item in doctors){
+                    <div class="vrach-block">
+                        <img class="icon-vrach" src="Врач.png" alt=""></img>
+                            <p class="name-vrach">@item.Name</p>
+                            <p class="name-vrach">@item.Surname</p>
+                            <p class="doljnost-vrach">@item.Fathername</p>
+                            <a asp-action="MakeAppointmentChooseData" asp-route-id="@item.Id" class="btn-zapis">Записаться</a>
+                    </div>
+                }
+            </div>
+        </form>
+    </section>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

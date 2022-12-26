@@ -1,0 +1,30 @@
+﻿@model Clinic.Models.Patient
+
+@{
+    Layout = "_LayoutAuthorizePatient";
+    List<Patient> patients = ViewData["Patient"] != null ? (List<Patient>)ViewData["Patient"] : null;
+}
+
+<section class="rols">
+    <p>Личный кабинет</p>
+    </section>
+<p class="dobro_poz">Добро пожаловать, @patients.Select(a=>a.Surname).FirstOrDefault() @patients.Select(a=>a.Name).FirstOrDefault() @patients.Select(a=>a.Fathername).FirstOrDefault()</p>
+    <section>
+        <div class="container spisok-priemov kabinet">
+        <a asp-action="LookAmbulancyCard" class="lk" >
+                <div class="lk-block">
+                    <p>Амбулаторная карта</p>
+                </div>
+              </a>
+        <a asp-action="MakeAppointmentChooseService" class="lk">
+                <div class="lk-block">
+                    <p>Запись на прием</p>
+                </div>
+              </a>
+        <a asp-action="LookAppointments" class="lk">
+                <div class="lk-block">
+                    <p>Список приемов</p>
+                </div>
+              </a>
+        </div>
+    </section>

@@ -1,0 +1,57 @@
+﻿@model Clinic.Models.Сonclusion
+@using Clinic.Models
+
+@{
+    Layout = "_LayoutAuthorizeDoctor";
+
+    List<Service> services = ViewData["Services"] != null ? (List<Service>)ViewData["Services"] : null;
+    List<Appointment> appointments = ViewData["Appointment"] != null ? (List<Appointment>)ViewData["Appointment"] : null;
+    List<Doctor> doctors = ViewData["Doctor"] != null ? (List<Doctor>)ViewData["Doctor"] : null;
+    List<Patient> patients = ViewData["Patient"] != null ? (List<Patient>)ViewData["Patient"] : null;
+    List<Time> times = ViewData["times"] != null ? (List<Time>)ViewData["times"] : null;
+}
+
+<section class="rols">
+    <p>Личный кабинет врача</p>
+</section>
+
+<p class="dobro_poz">Выписка заключения</p>
+<hr />
+
+<section>
+        <div class="container container-style" id="container-style">
+              <div class="atribut-priem">
+                <h3>Информация о приёме</h3>
+            <p>Дата: @appointments.Select(a=>a.DateOfAppointment).FirstOrDefault().ToString("dd':'MM':'yy")</p>
+            @if (doctors.Any(a=>a.Id==appointments.Select(a=>a.DoctorId).FirstOrDefault() && a.WorkShift == 1)){
+            
+            <p>Время: @times.Where(a => a.Id == appointments.Select(a=>a.timeId).FirstOrDefault()).Select(a => a.timeOnlyMorning).FirstOrDefault().ToString("hh':'mm")</p>
+    } else {
+                <p>Время: @times.Where(a=>a.Id == appointments.Select(a=>a.timeId).FirstOrDefault()).Select(a=>a.timeOnlyEvening).FirstOrDefault().ToString("hh':'mm")</p>
+    }
+            <p>
+                Пациент:  @patients.Where(a=>a.Id==appointments.Select(a=>a.PatientId).FirstOrDefault()).Select(a=>a.Surname).FirstOrDefault()
+                @patients.Where(a=>a.Id==appointments.Select(a=>a.PatientId).FirstOrDefault()).Select(a=>a.Name).FirstOrDefault()
+                @patients.Where(a=>a.Id==appointments.Select(a=>a.PatientId).FirstOrDefault()).Select(a=>a.Fathername).FirstOrDefault()
+                </p>
+            <p>Услуга: @services.Where(a=>a.Id==appointments.Select(a=>a.ServiceId).FirstOrDefault()).Select(a=>a.ServiceName).FirstOrDefault()  </p>
+              </div>
+              <form asp-action="CreateConclusion" >
+              <div class="atribut-priem-vvod">
+                <p>Жалобы:</p>
+                <input asp-for="Complaints" class="style-vipiska" type="text">
+                <p>Рекомендации:</p>
+                <input asp-for="Recommendations" class="style-vipiska" type="text">
+                <p>Диагноз:</p>
+                <input asp-for="Diagnosis" class="style-vipiska" type="text">
+                <p><button class="btn-otpravit">Отправить</button></p>
+              </div>
+              </form>
+        </div>
+    </section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

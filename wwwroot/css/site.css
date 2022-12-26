@@ -1,0 +1,442 @@
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background: #51BE97;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /*padding-left: 15px;*/
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100%;
+}
+
+.nav-item {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.item-1 {
+    width: 20%;
+    background-color: #dbdbdb56;
+}
+
+.item-2 {
+    width: 20%;
+    background-color: #3c3c3c2e;
+}
+
+.item-3 {
+    justify-content: end;
+    color: white;
+    width: 10%;
+    padding-right: 30px;
+}
+
+.nav-item-1 {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    width: 33%;
+    background-color: #5BE0B0;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+.item-4 {
+    margin: 10px 0px 10px 0px;
+}
+
+.header-top-1 {
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.header-top-3 {
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+.header-logo {
+    height: 10vh;
+    width: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+    background-color: #E4E4E4;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+/* Строка поиска */
+.container {
+    margin: 0% 10% 0% 10%;
+}
+
+.search-box {
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-txt {
+    border-radius: 15px;
+    border-color: rgb(166, 166, 166, 0.432);
+    width: 85%;
+    height: 46px;
+    font-size: 16px;
+}
+
+::placeholder {
+    color: rgb(166, 166, 166);
+}
+
+.search-btn {
+    margin-left: 10px;
+    color: white;
+    float: right;
+    width: 15%;
+    height: 50px;
+    border-radius: 15px;
+    background: #51BE97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+/* список услуг */
+.container-style {
+    border: 2px solid #51BE97;
+    border-radius: 15px;
+    background-color: white;
+    min-height: 60vh;
+    max-height: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.usluga {
+    width: 100%;
+    height: 25px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.usluga-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    border: 2px solid #51BE97;
+    height: 100%;
+    border-radius: 15px;
+    padding: 0px 10px 0px 10px;
+}
+
+.usluga-price {
+    text-align: right;
+    font-weight: 700;
+}
+
+
+
+
+
+/* Список врачей */
+.container-of-vrach {
+    display: flex;
+    /*justify-content: space-between;*/
+    width: 100%;
+}
+
+.vrach-block {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    margin: 10px;
+    border: 2px solid #51BE97;
+    width: 30%;
+    height: 350px;
+    border-radius: 15px;
+    padding: 15px 10px 0px 10px;
+}
+
+.icon-vrach {
+    width: 150px;
+    height: 150px;
+}
+
+.name-vrach {
+    font-weight: 700;
+    margin: 0px;
+}
+
+.doljnost-vrach {
+    margin: 5px 0px 50px 0px;
+}
+
+.btn-zapis {
+    text-decoration: none;
+    color: #51BE97;
+    height: 100px;
+    width: 100px;
+    border: 2px solid #51BE97;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px 30px 10px 30px;
+    margin-top: 50px;
+    font-weight: 700;
+}
+
+
+/* Регистрация */
+.container-register {
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+.style-register {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border-color: #51BE97;
+    width: 99%;
+    height: 46px;
+    font-size: 16px;
+}
+
+.register {
+    font-weight: 700;
+    font-size: 50px;
+    margin: 10px 0px 20px 0px;
+    color: #51BE97;
+}
+
+.style-register::placeholder {
+    color: #51BE97;
+}
+
+.btn-otpravit {
+    border-radius: 15px;
+    border-color: #51BE97;
+    text-decoration: none;
+    background-color: #51BE97;
+    color: white;
+    font-weight: 700;
+    padding: 10px 20px 10px 20px;
+}
+
+
+/* Расписание */
+.search-date {
+    border-radius: 15px;
+    border-color: rgb(166, 166, 166, 0.432);
+    width: 25%;
+    height: 46px;
+    font-size: 16px;
+}
+
+.time {
+    background-color: #51BE97;
+}
+
+
+/* Список приемов */
+.spisok-priemov {
+    min-height: 60vh;
+    max-height: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.spisok-priemov-block {
+    margin: 10px;
+    border: 2px solid #51BE97;
+    height: 100%;
+    border-radius: 15px;
+    padding: 0px 15px 10px 10px;
+}
+
+.btn-otpravit-1 {
+    text-align: right;
+}
+
+.priem-inf {
+    margin-bottom: 0px;
+}
+
+.rols {
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    height: 150px;
+    background-color: #D9D9D9;
+    font-size: 40px;
+}
+
+/* Личный кабинет */
+.kabinet {
+    min-height: 45vh;
+}
+
+.lk {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+.lk-block {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    border-left: 15px solid #51BE97;
+    background-color: #D9D9D9;
+    width: 50%;
+    height: 120px;
+    border-radius: 15px;
+    padding: 0px 10px 0px 10px;
+}
+
+
+/*  */
+#container-style {
+    padding: 0px;
+}
+
+.atribut-priem {
+    height: 40%;
+    background-color: #51BE97;
+    border-radius: 13px 13px 0px 0px;
+    padding: 10px;
+}
+
+.atribut-priem-vvod {
+    height: 60%;
+    background-color: white;
+    border-radius: 13px 13px 0px 0px;
+    padding: 10px;
+    border-radius: 0px 0px 13px 13px;
+}
+
+.style-vipiska {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border-color: #51BE97;
+    width: 98%;
+    height: 100px;
+    font-size: 16px;
+}
+
+
+
+footer {
+    background: #51BE97;
+    /*height: 10vh;
+*/ padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.container-section-footer {
+    margin: 0% 10% 0% 10%;
+}
+
+.footer-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.footer-inf-left {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.footer-logo {
+    height: 64px;
+    width: 80px;
+    margin-right: 5px;
+}
+
+.footer-inf-left-text {
+    margin: 0px;
+}
+
+.footer-inf-right {
+    margin-left: 10px;
+    color: white;
+    line-height: 2px;
+}
+
+.page-footer {
+    padding: 1rem;
+    background: #51BE97;
+    color: #fff;
+    text-align: center;
+}
+
+    .page-footer.fixed-bottom {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+    }
+
+.dobro_poz {
+    font-size: 40px;
+    padding-left: 10%;
+}
+
+.simple_text {
+    font-size: 15px;
+    padding-left: 10%;
+    padding-bottom 5%;
+}
+
+.simple_text_block{
+    padding-bottom: 5px;
+}

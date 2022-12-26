@@ -1,0 +1,63 @@
+﻿@model Clinic.Models.Appointment
+@using Clinic.Models
+
+@{
+    Layout = "_LayoutAuthorizeDoctor";
+
+    List<Service> services = ViewData["Services"] != null ? (List<Service>)ViewData["Services"] : null;
+    List<Appointment> appointments = ViewData["Appointment"] != null ? (List<Appointment>)ViewData["Appointment"] : null;
+    List<Doctor> doctors = ViewData["Doctor"] != null ? (List<Doctor>)ViewData["Doctor"] : null;
+    List<Patient> patients = ViewData["Patient"] != null ? (List<Patient>)ViewData["Patient"] : null;
+    List<Time> times = ViewData["times"] != null ? (List<Time>)ViewData["times"] : null;
+}
+
+<section class="rols">
+    <p>Личный кабинет врача</p>
+</section>
+
+<p class="dobro_poz">Список приёмов</p>
+<hr />
+
+<section>
+        <div class="container">
+                    <form asp-action="ListAppointments">
+            <div class="search-box">
+                <input asp-for="DateOfAppointment" class="search-date" type="date" placeholder="Выберите дату">
+                <input type="submit" class="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <div class="container spisok-priemov">
+                        @if (@appointments != null)
+            {
+                @foreach (var item in appointments){
+            <div class="spisok-priemov-block">
+
+                    <p>Пациент:  @patients.Where(a=>a.Id==item.PatientId).Select(a=>a.Name).FirstOrDefault() @patients.Where(a=>a.Id==item.PatientId).Select(a=>a.Surname).FirstOrDefault() @patients.Where(a=>a.Id==item.PatientId).Select(a=>a.Fathername).FirstOrDefault()</p>
+                @if (doctors.Any(a => a.Id == item.DoctorId && a.WorkShift == 1))
+                    {
+                        <p class="priem-inf">Время: @times.Where(a => a.Id == item.timeId).Select(a => a.timeOnlyMorning).FirstOrDefault().ToString("hh':'mm")</p>
+                    }
+                    else
+                    {
+                        <p class="priem-inf">Время: @times.Where(a=>a.Id == item.timeId).Select(a=>a.timeOnlyEvening).FirstOrDefault().ToString("hh':'mm")</p>
+                    }
+                    <p class="priem-inf">Услуга: @services.Where(a=>a.Id==item.ServiceId).Select(a=>a.ServiceName).FirstOrDefault()  </p>   <br />
+
+                    <p class="btn-otpravit-1"><a asp-action="DoAppointment" asp-route-id="@item.Id" class="btn-otpravit">Принять пациента</a></p>
+
+             </div>
+            }
+        }
+        </div>
+    </section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

@@ -1,0 +1,40 @@
+﻿@model Clinic.Models.Service
+
+@{
+    Layout = "_LayoutAuthorizeAdmin";
+
+    ViewData["Title"] = "Delete";
+}
+
+<section class="rols">
+    <p>Личный кабинет администратора</p>
+</section>
+
+<p class="dobro_poz">Удалить услугу</p>
+<hr />
+
+<h3>Вы уверены, что хотите удалить эту услугу?</h3>
+<div>
+    <h4>Услуга</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ServiceName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SpecializationId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SpecializationId)
+        </dd>
+    </dl>
+    
+    <form asp-action="DeleteServices">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-action="IndexServices">Вернуться к списку</a>
+    </form>
+</div>

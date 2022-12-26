@@ -1,0 +1,65 @@
+﻿@*@model Clinic.Models.Appointment*@
+@using Clinic.Models
+
+@{
+    Layout = "_LayoutAuthorizePatient";
+
+    List<Doctor> doctors = ViewData["Doctors"] != null ? (List<Doctor>)ViewData["Doctors"] : null;
+    List<Specialization> specializations = ViewData["Specialization"] != null ? (List<Specialization>)ViewData["Specialization"] : null;
+    List<Service> services = ViewData["Services"] != null ? (List<Service>)ViewData["Services"] : null;
+    List<Time> times = ViewData["times"] != null ? (List<Time>)ViewData["times"] : null;
+    List<Appointment> appointments = ViewData["Appointment"] != null ? (List<Appointment>)ViewData["Appointment"] : null;
+}
+
+<section class="rols">
+    <p>Запись на приём</p>
+</section>
+
+<p class="dobro_poz">Выберите дату приёма</p>
+<hr />
+
+    <section>
+        <div class="simple_text">
+        <p class="simple_text_block">Врач: @doctors.FirstOrDefault().Name @doctors.FirstOrDefault().Surname @doctors.FirstOrDefault().Fathername </p>
+        <p class="simple_text_block">Специализация: @specializations.FirstOrDefault().SpecializationName</p>
+        <p class="simple_text_block">Услуга: @services.FirstOrDefault().ServiceName</p>
+    </div>
+        <div class="container">
+        <form asp-action="MakeAppointmentChooseData" method="post">
+            <div class="search-box">
+                <input class="search-date" type="date" name="DateOfAppointment" placeholder="Выберите дату">
+                <input type="submit" class="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </form>
+        </div>
+    </section>
+
+    <section>
+        <div class="simple_text">
+            <p>Выберите время:</p>
+        </div>
+        <div class="container container-style">
+            <form asp-action="CreateApp" method="post">
+                  @if(doctors.FirstOrDefault().WorkShift == 1) {
+                    @if (times != null && appointments != null)
+                    {
+                        @foreach (var item in times)
+                        {
+                            @if (!appointments.Any(a => a.timeId == item.Id))
+                            {
+                                <div class="usluga-block time">
+                                    <a asp-action="CreateApp" asp-route-id="@item.Id" class="usluga">
+                                       <label for="btn btn-primary">@item.timeOnlyMorning.ToString("hh':'mm")</label>
+                                </a>    
+                                </div>
+                           }
+                        }
+                    }else
+                    {
+                        <p>Нет доступных записей на эту дату</p>
+                    }
+              }
+              </form>
+        </div>
+    </section>

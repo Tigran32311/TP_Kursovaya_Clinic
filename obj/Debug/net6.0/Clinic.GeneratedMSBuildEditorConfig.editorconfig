@@ -1,0 +1,157 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Clinic
+build_property.RootNamespace = Clinic
+build_property.ProjectDir = C:\Users\varme\OneDrive\Рабочий стол\файлы ноут хвавей\Clinic\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\varme\OneDrive\Рабочий стол\файлы ноут хвавей\Clinic
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Admin/CreateDoctors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlRG9jdG9ycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Admin/CreateServices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlU2VydmljZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Admin/DeleteDoctors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlRG9jdG9ycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Admin/DeleteServices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlU2VydmljZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Admin/DetailsDoctors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlsc0RvY3RvcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Admin/DetailsServices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlsc1NlcnZpY2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Admin/EditDoctors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdERvY3RvcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Admin/EditServices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFNlcnZpY2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Admin/IndexDoctors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXhEb2N0b3JzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Admin/IndexServices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXhTZXJ2aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Admin/MainPageAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFpblBhZ2VBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Doctor/DoAppointment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERvQXBwb2ludG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Doctor/ListAppointments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXExpc3RBcHBvaW50bWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Doctor/MainPageDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXE1haW5QYWdlRG9jdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Doctor/SuccessCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXFN1Y2Nlc3NDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Home/ListServices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXN0U2VydmljZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Home/MainPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYWluUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Patient/ListServices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxMaXN0U2VydmljZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Patient/LookAmbulancyCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxMb29rQW1idWxhbmN5Q2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Patient/LookAppointments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxMb29rQXBwb2ludG1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Patient/MainPagePatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxNYWluUGFnZVBhdGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Patient/MakeAppointmentChooseData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxNYWtlQXBwb2ludG1lbnRDaG9vc2VEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Patient/MakeAppointmentChooseDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxNYWtlQXBwb2ludG1lbnRDaG9vc2VEb2N0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Patient/MakeAppointmentChooseService.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxNYWtlQXBwb2ludG1lbnRDaG9vc2VTZXJ2aWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Patient/SuccessCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxTdWNjZXNzQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Shared/_LayoutAuthorizeAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBdXRob3JpemVBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Shared/_LayoutAuthorizeDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBdXRob3JpemVEb2N0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Shared/_LayoutAuthorizePatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBdXRob3JpemVQYXRpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varme/OneDrive/Рабочий стол/файлы ноут хвавей/Clinic/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-anw476pqkn

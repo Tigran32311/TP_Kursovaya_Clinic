@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Clinic</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Clinic.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <a asp-controller="Home" asp-action="MainPage" class="header-logo">
+
+                <img src="img/логотип3.jpg" class="logo" alt="">
+
+            </a>
+            <a asp-controller="Admin" asp-action="MainPageAdmin" class="nav-item item-1">
+                <div class="header-top-1">Личный кабинет</div>
+            </a>
+            <div class="nav-item item-3">
+                <a asp-controller="Account" asp-action="Logout" class="header-top-3"> Выход </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container-section-footer">
+            <div class="footer-line">
+                <div class="footer-inf-left">
+                    <img class="footer-logo" src="img/логотип3.jpg" alt="">
+                </div>
+                <div class="footer-inf-right">
+                    <p>Телефон: +7 (996) 192 24 57</p>
+                    <p>E-mail: tigran32311@mail.ru</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

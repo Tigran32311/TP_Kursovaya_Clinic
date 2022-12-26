@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Clinic.Models.Service>
+@using Clinic.Models
+
+@{
+    Layout = "_LayoutAuthorizePatient";
+
+    List<Service> services = ViewData["Services"] != null ? (List<Service>)ViewData["Services"] : null;
+    List<Specialization> specializations = ViewData["Specialization"] != null ? (List<Specialization>)ViewData["Specialization"] : null;
+    //ViewData["Title"] = "Create";
+}
+
+<section class="rols">
+    <p>Запись на приём</p>
+</section>
+
+<p class="dobro_poz">Услуги</p>
+<hr />
+<section>
+        <div class="container">
+            <div class="search-box">
+                <input class="search-txt" type="text" name="" placeholder="Введите название услуги">
+                <a class="search-btn" >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container container-style">
+            <form asp-action="Create">
+                @foreach(var item in services){
+                <a asp-action="MakeAppointmentChooseDoctor" asp-route-id="@item.Id" class="usluga">
+                <div class="usluga-block">
+                        <p>@item.ServiceName  @specializations.Where(a=> a.Id == item.SpecializationId).Select(a=> a.SpecializationName).FirstOrDefault()</p>
+                    <p class="usluga-price">500$</p>
+                </div>
+              </a>
+                }
+        </form>
+        </div>
+    </section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

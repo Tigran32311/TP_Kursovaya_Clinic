@@ -1,0 +1,32 @@
+﻿
+@{
+	Layout = "_LayoutAuthorizeAdmin";
+}
+
+<section class="rols">
+    <p>Личный кабинет Администратора</p>
+</section>
+<p class="dobro_poz">Добро пожаловать</p>
+
+<section>
+    <div class="container spisok-priemov kabinet">
+        <a asp-action="IndexDoctors" class="lk">
+            <div class="lk-block">
+                <p>Посмотреть список врачей</p>
+            </div>
+        </a>
+
+
+        <a asp-action="IndexServices" class="lk">
+            <div class="lk-block">
+                <p>Посмотреть список услуг</p>
+
+        </a>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

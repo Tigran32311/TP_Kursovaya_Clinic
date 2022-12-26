@@ -1,0 +1,22 @@
+﻿@model Clinic.Models.Doctor
+
+@{
+    Layout = "_LayoutAuthorizeDoctor";
+
+    List<Doctor> doctors = ViewData["Doctor"] != null ? (List<Doctor>)ViewData["Doctor"] : null;
+}
+
+<section class="rols">
+    <p>Личный кабинет врача</p>
+</section>
+<p class="dobro_poz">Добро пожаловать, @doctors.Select(a=>a.Surname).FirstOrDefault() @doctors.Select(a=>a.Name).FirstOrDefault() @doctors.Select(a=>a.Fathername).FirstOrDefault()</p>
+
+<section>
+    <div class="container spisok-priemov kabinet">
+        <a asp-action="ListAppointments" class="lk">
+            <div class="lk-block">
+                <p>Посмотреть записи на приём</p>
+            </div>
+        </a>
+    </div>
+</section>
